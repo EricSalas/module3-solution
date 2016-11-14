@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="NarrowItDownApp">
+<meta charset="utf-8">
+<head>
+	<title>Module 3 - solution</title>
+</head>
+<body>
+<h2>Module 3 - solution</h2>
+<div ng-controller="NarrowItDownController as list1">
+	<label>Search:</label><input type="text" ng-model="list1.searchTerm">
+	<button ng-click="list1.search();">Narrow it down for me!</button>
+	<br>
+
+	<found-items  my-list="list1"  remove-item="list11.removeItem(index)" ></found-items>
+</br>
+	<text ng-if="list1.found.length == 0 || list1.nothing == true"><b>Nothing found!</b></text>
+
+</div>
+
+
+
+<script type="text/javascript" src="scripts/angular.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+</body>
+</html>
